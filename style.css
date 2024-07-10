@@ -1,0 +1,132 @@
+
+/* Reset margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the full viewport height is used */
+  overflow: hidden; /* Prevent scrolling on the body directly */
+}
+
+#canvasContainer {
+  height: calc(100vh - 100px); /* Adjust based on header/footer. This assumes 100px total for header/footer */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+}
+
+canvas {
+  display: block; /* Remove extra space below canvas */
+  /* No width set here since it's controlled by JavaScript */
+}
+
+td {
+    padding: 5px;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  input[type=checkbox]+label {
+    color: #ccc;
+    font-style: italic;
+  }
+  
+  #denominator_1 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(0, 0, 0);
+  }
+
+  #denominator_2 input[type=checkbox]:checked+label, #denominator_4 input[type=checkbox]:checked+label, #denominator_8 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(33, 7, 232);
+  }
+
+  #denominator_3 input[type=checkbox]:checked+label, #denominator_9 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(232, 165, 7);
+  }
+
+  #denominator_5 input[type=checkbox]:checked+label, #denominator_10 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(244, 10, 10);
+  }
+
+  #denominator_6 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(20, 109, 16);
+  }
+
+  #denominator_7 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(108, 11, 225);
+  }
+
+  #denominator_11 input[type=checkbox]:checked+label {
+    font-style: normal;
+    color: rgb(116, 38, 3);
+  }
+
+  .tablinks {
+    overflow: hidden;
+    background-color: #ccc;
+    color: black;
+    float: left;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px;
+    margin: 1px 1px 1px 1px;
+    font-size: 17px;
+    width: 49%;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .tablinks:hover {
+    background-color: #ddd;
+  }
+
+  .tablinks.active {
+    font-weight: bold;
+    background-color: #fff;
+    border-bottom: 1px solid white;
+  }
+
+ #zoom {
+    display: inline-block;
+    margin-left: 1px;
+ }
+
+ #zoomSlider {
+    position: relative;
+    top: 4px;
+ }
+
+ #floatingUI {
+  width: auto;
+  height: auto;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  position: absolute;
+  left: 80%;
+  z-index: 10;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+#header {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+  border-radius: 0.5em 0.5em 0em 0em;
+}
+
+#resetButton {
+  float: right;
+}
