@@ -18,101 +18,101 @@ canvas {
   /* No width set here since it's controlled by JavaScript */
 }
 
+.fraction {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.fraction .numerator,
+.fraction .denominator {
+  padding: 0 2px;
+}
+
+.fraction .denominator {
+  border-top: 1px solid;
+}
+
+#pulseTable {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 td {
-    padding: 5px;
+  padding-top: 1px;
+  padding-right: 5px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  text-align: center;
 }
 
 .hidden {
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-  }
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
   
-  input[type=checkbox]+label {
-    color: #ccc;
-    font-style: italic;
-  }
-  
-  #denominator_1 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(0, 0, 0);
-  }
+input[type=checkbox]+label {
+  color: #ccc;
+  font-style: italic;
+}
 
-  #denominator_2 input[type=checkbox]:checked+label, #denominator_4 input[type=checkbox]:checked+label, #denominator_8 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(33, 7, 232);
-  }
+#denominator_1 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
 
-  #denominator_3 input[type=checkbox]:checked+label, #denominator_9 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(232, 165, 7);
-  }
+#denominator_2 input[type=checkbox]:checked+label, #denominator_4 input[type=checkbox]:checked+label, #denominator_8 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(33, 7, 232);
+}
 
-  #denominator_5 input[type=checkbox]:checked+label, #denominator_10 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(244, 10, 10);
-  }
+#denominator_3 input[type=checkbox]:checked+label, #denominator_9 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(232, 165, 7);
+}
 
-  #denominator_6 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(20, 109, 16);
-  }
+#denominator_5 input[type=checkbox]:checked+label, #denominator_10 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(244, 10, 10);
+}
 
-  #denominator_7 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(108, 11, 225);
-  }
+#denominator_6 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(20, 109, 16);
+}
 
-  #denominator_11 input[type=checkbox]:checked+label {
-    font-style: normal;
-    color: rgb(116, 38, 3);
-  }
+#denominator_7 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(108, 11, 225);
+}
 
-  .tablinks {
-    overflow: hidden;
-    background-color: #ccc;
-    color: black;
-    float: left;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: none;
-    outline: none;
-    cursor: pointer;
-    padding: 2px;
-    margin: 1px 1px 1px 1px;
-    font-size: 17px;
-    width: 49%;
-    border-radius: 5px 5px 0px 0px;
-  }
+#denominator_11 input[type=checkbox]:checked+label {
+  font-style: normal;
+  color: rgb(116, 38, 3);
+}
 
-  .tablinks:hover {
-    background-color: #ddd;
-  }
+#zoom {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
-  .tablinks.active {
-    font-weight: bold;
-    background-color: #fff;
-    border-bottom: 1px solid white;
-  }
+#zoomSlider {
+  position: relative;
+  top: 4px;
+}
 
- #zoom {
-    display: inline-block;
-    margin-left: 1px;
- }
-
- #zoomSlider {
-    position: relative;
-    top: 4px;
- }
-
- #floatingUI {
-  width: auto;
-  height: auto;
+#floatingUI {
+  width: fit-content;
+  height: fit-content;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;
   position: absolute;
-  left: 80%;
+  top: 10px;
+  right: 10px;
   z-index: 10;
   padding: 0.5em;
   border-radius: 1em;

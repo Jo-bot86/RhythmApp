@@ -5,8 +5,6 @@ let activePulses = [];
 let activeGrids = [];
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]'); //select all checkboxes
-const table = document.getElementById("table"); //select the table
-const tablinks = document.getElementsByClassName("tablinks"); //select all tabs
 
 //set up canvas
 const canvas = document.querySelector("#myCanvas");
@@ -32,20 +30,6 @@ function adjustCanvasWidth() {
     const contentWidth = ((beats) * unit);
     canvasContainer.width = contentWidth;
     canvas.width = contentWidth;
-}
-
-function activatePulseTable() {
-    table.classList.add("pulse");
-
-    //uncheck all checkboxes
-    for (let i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = false;
-    }
-
-    // check all checkboxes that are activePulses
-    for (let i = 0; i < activePulses.length; i++) {
-        document.getElementById(activePulses[i]).checked = true;
-    }
 }
 
 //add event listeners to all checkboxes

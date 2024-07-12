@@ -11,13 +11,10 @@
                 Beats: <input type="number" value="4" min="1" style="width: 3em;" name="input_beats" id="input_beats">
                 <button type="button" id="resetButton" style="color: orangered;">reset</button>
             </p>
-            <table class="pulse" id="table">
+            <table class="pulse" id="pulseTable">
                 <thead>
                     <tr>
-                        <th colspan="9">
-                            <button class="tablinks active" id="pulseTab">Pulses</button>
-                             <button class="tablinks" id="gridTab">Grids</button>
-                        </th>
+                        <th colspan="9">Pulses</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,196 +37,827 @@
                             <label for="8/1">8</label></td>
                         <td><input type="checkbox" class="hidden denominator_1" id="9/1" name="pulse" value="9"/>
                             <label for="9/1">9</label></td>
-                            <td><input type="checkbox" class="hidden denominator_1" id="10/1" name="pulse" value="10"/>
-                                <label for="10/1">10</label></td>
                     </tr>
-                    <tr id="denominator_2">
+                </tr>    <tr id="denominator_2">
                         <td><input type="checkbox" class="hidden denominator_2" id="1/2" name="pulse" value="1"/>
-                            <label for="1/2">1/2</label></td>
+                            <label for="1/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="2/2" name="pulse" value="2"/>
-                            <label for="2/2">2/2</label></td>
+                            <label for="2/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="3/2" name="pulse" value="3"/>
-                            <label for="3/2">3/2</label></td>
+                            <label for="3/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="4/2" name="pulse" value="4"/>
-                            <label for="4/2">4/2</label></td>
+                            <label for="4/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="5/2" name="pulse" value="5"/>
-                            <label for="5/2">5/2</label></td>
+                            <label for="5/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="6/2" name="pulse" value="6"/>
-                            <label for="6/2">6/2</label></td>
+                            <label for="6/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="7/2" name="pulse" value="7"/>
-                            <label for="7/2">7/2</label></td>
+                            <label for="7/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="8/2" name="pulse" value="8"/>
-                            <label for="8/2">8/2</label></td>
+                            <label for="8/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden denominator_2" id="9/2" name="pulse" value="9"/>
-                            <label for="9/2">9/2</label></td>
-                        <td><input type="checkbox" class="hidden denominator_2" id="10/2" name="pulse" value="10"/>
-                            <label for="10/2">10/2</label></td>
+                            <label for="9/2">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">2</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_3">
-                        <td><input type="checkbox" class="hidden" id="1/3" name="pulse" value="1"/>
-                            <label for="1/3">1/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="2/3" name="pulse" value="2"/>
-                            <label for="2/3">2/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="3/3" name="pulse" value="3"/>
-                            <label for="3/3">3/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="4/3" name="pulse" value="4"/>
-                            <label for="4/3">4/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="5/3" name="pulse" value="5"/>
-                            <label for="5/3">5/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="6/3" name="pulse" value="6"/>
-                            <label for="6/3">6/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="7/3" name="pulse" value="7"/>
-                            <label for="7/3">7/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="8/3" name="pulse" value="8"/>
-                            <label for="8/3">8/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="9/3" name="pulse" value="9"/>
-                            <label for="9/3">9/3</label></td>
-                        <td><input type="checkbox" class="hidden" id="10/3" name="pulse" value="10"/>
-                            <label for="10/2">10/3</label></td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="1/3" name="pulse" value="1"/>
+                            <label for="1/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="2/3" name="pulse" value="2"/>
+                            <label for="2/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="3/3" name="pulse" value="3"/>
+                            <label for="3/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="4/3" name="pulse" value="4"/>
+                            <label for="4/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="5/3" name="pulse" value="5"/>
+                            <label for="5/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="6/3" name="pulse" value="6"/>
+                            <label for="6/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="7/3" name="pulse" value="7"/>
+                            <label for="7/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="8/3" name="pulse" value="8"/>
+                            <label for="8/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
+                        <td><input type="checkbox" class="hidden denominator_3" id="9/3" name="pulse" value="9"/>
+                            <label for="9/3">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">3</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </td>
                     </tr>
+
                     <tr id="denominator_4">
                         <td><input type="checkbox" class="hidden" id="1/4" name="pulse" value="1"/>
-                            <label for="1/4">1/4</label></td>
+                            <label for="1/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/4" name="pulse" value="2"/>
-                            <label for="2/4">2/4</label></td>
+                            <label for="2/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/4" name="pulse" value="3"/>
-                            <label for="3/4">3/4</label></td>
+                            <label for="3/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/4" name="pulse" value="4"/>
-                            <label for="4/4">4/4</label></td>
+                            <label for="4/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/4" name="pulse" value="5"/>
-                            <label for="5/4">5/4</label></td>
+                            <label for="5/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/4" name="pulse" value="6"/>
-                            <label for="6/4">6/4</label></td>
+                            <label for="6/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/4" name="pulse" value="7"/>
-                            <label for="7/4">7/4</label></td>
+                            <label for="7/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/4" name="pulse" value="8"/>
-                            <label for="8/4">8/4</label></td>
+                            <label for="8/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/4" name="pulse" value="9"/>
-                            <label for="9/4">9/4</label></td>
+                            <label for="9/4">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">4</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_5">
                         <td><input type="checkbox" class="hidden" id="1/5" name="pulse" value="1"/>
-                            <label for="1/5">1/5</label></td>
+                            <label for="1/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/5" name="pulse" value="2"/>
-                            <label for="2/5">2/5</label></td>
+                            <label for="2/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/5" name="pulse" value="3"/>
-                            <label for="3/5">3/5</label></td>
+                            <label for="3/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/5" name="pulse" value="4"/>
-                            <label for="4/5">4/5</label></td>
+                            <label for="4/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/5" name="pulse" value="5"/>
-                            <label for="5/5">5/5</label></td>
+                            <label for="5/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/5" name="pulse" value="6"/>
-                            <label for="6/5">6/5</label></td>
+                            <label for="6/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/5" name="pulse" value="7"/>
-                            <label for="7/5">7/5</label></td>
+                            <label for="7/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/5" name="pulse" value="8"/>
-                            <label for="8/5">8/5</label></td>
+                            <label for="8/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/5" name="pulse" value="9"/>
-                            <label for="9/5">9/5</label></td>
+                            <label for="9/5">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">5</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_6">
                         <td><input type="checkbox" class="hidden" id="1/6" name="pulse" value="1"/>
-                            <label for="1/6">1/6</label></td>
+                            <label for="1/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/6" name="pulse" value="2"/>
-                            <label for="2/6">2/6</label></td>
+                            <label for="2/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/6" name="pulse" value="3"/>
-                            <label for="3/6">3/6</label></td>
+                            <label for="3/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/6" name="pulse" value="4"/>
-                            <label for="4/6">4/6</label></td>
+                            <label for="4/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/6" name="pulse" value="5"/>
-                            <label for="5/6">5/6</label></td>
+                            <label for="5/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/6" name="pulse" value="6"/>
-                            <label for="6/6">6/6</label></td>
+                            <label for="6/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/6" name="pulse" value="7"/>
-                            <label for="7/6">7/6</label></td>
+                            <label for="7/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/6" name="pulse" value="8"/>
-                            <label for="8/6">8/6</label></td>
+                            <label for="8/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/6" name="pulse" value="9"/>
-                            <label for="9/6">9/6</label></td>
+                            <label for="9/6">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">6</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_7">
                         <td><input type="checkbox" class="hidden" id="1/7" name="pulse" value="1"/>
-                            <label for="1/7">1/7</label></td>
+                            <label for="1/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/7" name="pulse" value="2"/>
-                            <label for="2/7">2/7</label></td>
+                            <label for="2/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/7" name="pulse" value="3"/>
-                            <label for="3/7">3/7</label></td>
+                            <label for="3/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/7" name="pulse" value="4"/>
-                            <label for="4/7">4/7</label></td>
+                            <label for="4/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/7" name="pulse" value="5"/>
-                            <label for="5/7">5/7</label></td>
+                            <label for="5/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/7" name="pulse" value="6"/>
-                            <label for="6/7">6/7</label></td>
+                            <label for="6/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/7" name="pulse" value="7"/>
-                            <label for="7/7">7/7</label></td>
+                            <label for="7/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/7" name="pulse" value="8"/>
-                            <label for="8/7">8/7</label></td>
+                            <label for="8/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/7" name="pulse" value="9"/>
-                            <label for="9/7">9/7</label></td>
+                            <label for="9/7">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">7</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_8">
                         <td><input type="checkbox" class="hidden" id="1/8" name="pulse" value="1"/>
-                            <label for="1/8">1/8</label></td>
+                            <label for="1/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/8" name="pulse" value="2"/>
-                            <label for="2/8">2/8</label></td>
+                            <label for="2/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/8" name="pulse" value="3"/>
-                            <label for="3/8">3/8</label></td>
+                            <label for="3/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/8" name="pulse" value="4"/>
-                            <label for="4/8">4/8</label></td>
+                            <label for="4/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/8" name="pulse" value="5"/>
-                            <label for="5/8">5/8</label></td>
+                            <label for="5/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/8" name="pulse" value="6"/>
-                            <label for="6/8">6/8</label></td>
+                            <label for="6/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/8" name="pulse" value="7"/>
-                            <label for="7/8">7/8</label></td>
+                            <label for="7/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/8" name="pulse" value="8"/>
-                            <label for="8/8">8/8</label></td>
+                            <label for="8/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/8" name="pulse" value="9"/>
-                            <label for="9/8">9/8</label></td>
+                            <label for="9/8">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">8</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                     </tr>
                     <tr id="denominator_9">
                         <td><input type="checkbox" class="hidden" id="1/9" name="pulse" value="1"/>
-                            <label for="1/9">1/9</label></td>
+                            <label for="1/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="2/9" name="pulse" value="2"/>
-                            <label for="2/9">2/9</label></td>
+                            <label for="2/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="3/9" name="pulse" value="3"/>
-                            <label for="3/9">3/9</label></td>
+                            <label for="3/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="4/9" name="pulse" value="4"/>
-                            <label for="4/9">4/9</label></td>
+                            <label for="4/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="5/9" name="pulse" value="5"/>
-                            <label for="5/9">5/9</label></td>
+                            <label for="5/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="6/9" name="pulse" value="6"/>
-                            <label for="6/9">6/9</label></td>
+                            <label for="6/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="7/9" name="pulse" value="7"/>
-                            <label for="7/9">7/9</label></td>
+                            <label for="7/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="8/9" name="pulse" value="8"/>
-                            <label for="8/9">8/9</label></td>
+                            <label for="8/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td>
                         <td><input type="checkbox" class="hidden" id="9/9" name="pulse" value="9"/>
-                            <label for="9/9">9/9</label></td> <!--Add 10/9 and the pitch difference between teh two major seconds becomes visible. (The y-axis can alos represent pitch)-->
-                    </tr>
-                    <tr id="denominator_10">
-                        <td><input type="checkbox" class="hidden" id="1/10" name="pulse" value="1"/>
-                            <label for="1/10">1/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="2/10" name="pulse" value="2"/>
-                            <label for="2/10">2/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="3/10" name="pulse" value="3"/>
-                            <label for="3/10">3/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="4/10" name="pulse" value="4"/>
-                            <label for="4/10">4/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="5/10" name="pulse" value="5"/>
-                            <label for="5/10">5/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="6/10" name="pulse" value="6"/>
-                            <label for="6/10">6/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="7/10" name="pulse" value="7"/>
-                            <label for="7/10">7/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="8/10" name="pulse" value="8"/>
-                            <label for="8/10">8/10</label></td>
-                        <td><input type="checkbox" class="hidden" id="9/10" name="pulse" value="9"/>
-                            <label for="9/10">9/10</label></td> <!--Add 10/9 and the pitch difference between teh two major seconds becomes visible. (The y-axis can alos represent pitch)-->
+                            <label for="9/9">
+                                <table class="fraction">
+                                    <tr>
+                                        <td class="numerator">9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="denominator">9</td>
+                                    </tr>
+                                </table>
+                            </label></td> <!--Add 10/9 and the pitch difference between teh two major seconds becomes visible. (The y-axis can alos represent pitch)-->
                     </tr>
                 </tbody>
             </table>
-            
             <br>
             <input type="text" name="irregularPulseInput" id="irregularPulseInput" placeholder="irregular pulse" style="width: 7em">
             / <input type="number" name="irregularDenominator" id="irregularDenominator" style="width: 2em;" value="1">

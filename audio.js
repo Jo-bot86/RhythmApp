@@ -1,7 +1,7 @@
 import * as Tone from './tone';
 
 // Create a synth for the metronome click sound
-const drum = new T
+const drum = new Tone.MembraneSynth().toDestination();
 
 // Define the metronome function
 function startMetronome(bpm = 60) {
