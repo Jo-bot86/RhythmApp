@@ -295,24 +295,37 @@ var header = document.getElementById("header");
 
 var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
-header.onmousedown = dragMouseDown;
-  
-function dragMouseDown(e) {
-      e = e || window.event;
-      e.preventDefault();
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
+header.addEventListener('mousedown', dragMouseDown);
+header.addEventListener('touchstart', dragMouseDown);
+
+function dragMouseDown(event) {
+    event.preventDefault();
+    if (event.type === 'mousedown') {
+        pos3 = event.clientX;
+        pos4 = event.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    } else if (event.type === 'touchstart') {
+        pos3 = event.touches[0].clientX;
+        pos4 = event.touches[0].clientY;
+        document.ontouchend = closeDragElement;
+        document.ontouchmove = elementDrag;
+    }
 }
-  
-function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
+
+function elementDrag(event) {
+    event.preventDefault();
+    if (event.type === 'mousemove') {
+        pos1 = pos3 - event.clientX;
+        pos2 = pos4 - event.clientY;
+        pos3 = event.clientX;
+        pos4 = event.clientY;
+    } else if (event.type === 'touchmove') {
+        pos1 = pos3 - event.touches[0].clientX;
+        pos2 = pos4 - event.touches[0].clientY;
+        pos3 = event.touches[0].clientX;
+        pos4 = event.touches[0].clientY;
+    }
     floatingUI.style.top = (floatingUI.offsetTop - pos2) + "px";
     floatingUI.style.left = (floatingUI.offsetLeft - pos1) + "px";
 }
@@ -320,6 +333,8 @@ function elementDrag(e) {
 function closeDragElement() {
     document.onmouseup = null;
     document.onmousemove = null;
+    document.ontouchend = null;
+    document.ontouchmove = null;
 }
 
 function resetPosition() {
