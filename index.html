@@ -859,8 +859,14 @@
                 </tbody>
             </table>
             <br>
-            <input type="text" name="irregularPulseInput" id="irregularPulseInput" placeholder="irregular pulse" style="width: 7em">
-            / <input type="number" name="irregularDenominator" id="irregularDenominator" style="width: 2em;" value="1">
+            <table>
+                <tr>
+                    <td id="td_irregularPulseInput"><input type="text" name="irregularPulseInput" id="irregularPulseInput" placeholder="irregular pulse"></td>
+                </tr>
+                <tr>    
+                    <td id="td_irregularDenominator"><input type="number" name="irregularDenominator" id="irregularDenominator" value="1"></td>
+                </tr>
+            </table>
             <button onclick="processIrregularPulseInput()">Draw!</button>
         </div>
 

@@ -195,10 +195,11 @@ function drawPulse(numerator, denominator) {
 }    
 
 function activatePulse(numerator,denominator){
-    //add pulse to array "activePulses"
+    //add pulse to array "activePulses" if it's not already in there
     if (!(activePulses.includes(`${numerator}/${denominator}`))) {
         activePulses.push(`${numerator}/${denominator}`);
     }
+
     redrawCanvas();
 }
 
@@ -217,17 +218,45 @@ function pulseClicked(numerator, denominator){
 
     if (state) {
         activatePulse(numerator, denominator);
+        //activate base pulse if it's not already activated
+        if (numerator != 1){
+            let stateBasePulse = document.getElementById(`1/${denominator}`).checked;
+            if (stateBasePulse === false) {
+                activatePulse(1, denominator);
+                //check the checkbox
+                document.getElementById(`1/${denominator}`).checked = true;
+            };
+        }    
     } else {
         deactivatePulse(numerator, denominator);
     };
+
+   
+
 }
 
 function processIrregularPulseInput() {
     var input = document.getElementById("irregularPulseInput").value;
-    var irregularPulse = input.split(",").map(Number);
+    var irregularPulse = input.split(/[,+ ]/).map(Number);
     var irregularDenominator = Number(document.getElementById("irregularDenominator").value);
     activePulses.push(`[${irregularPulse}]/${irregularDenominator}`);
     drawPulse(irregularPulse, irregularDenominator);
+
+    //activate base pulse if it's not already activated
+    let stateBasePulse = document.getElementById(`1/${irregularDenominator}`).checked;
+    if (stateBasePulse === false) {
+        activatePulse(1, irregularDenominator);
+        //check the checkbox
+        document.getElementById(`1/${irregularDenominator}`).checked = true;
+    };
+  
+    //activate the sum pulse if it's not already activated
+    let stateSumPulse = document.getElementById(`${sumArray(irregularPulse)}/${irregularDenominator}`).checked;
+    if (stateSumPulse === false) {
+        activatePulse(sumArray(irregularPulse), irregularDenominator);
+        //check the checkbox
+        document.getElementById(`${sumArray(irregularPulse)}/${irregularDenominator}`).checked = true;
+    };
 }
 
 function redrawCanvas() {
