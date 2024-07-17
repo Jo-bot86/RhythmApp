@@ -18,7 +18,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr id="denominator_1">
+                    <tr id="denominator_1"></tr>
                         <td><input type="checkbox" class="hidden denominator_1" id="1/1" name="pulse" value="1"/>
                             <label for="1/1">1</label></td>
                         <td><input type="checkbox" class="hidden denominator_1" id="2/1" name="pulse" value="2"/>
@@ -38,7 +38,7 @@
                         <td><input type="checkbox" class="hidden denominator_1" id="9/1" name="pulse" value="9"/>
                             <label for="9/1">9</label></td>
                     </tr>
-                </tr>    <tr id="denominator_2">
+                    <tr id="denominator_2">
                         <td><input type="checkbox" class="hidden denominator_2" id="1/2" name="pulse" value="1"/>
                             <label for="1/2">
                                 <table class="fraction">
@@ -859,15 +859,17 @@
                 </tbody>
             </table>
             <br>
-            <table>
+            <table id="irregularTable">
                 <tr>
                     <td id="td_irregularPulseInput"><input type="text" name="irregularPulseInput" id="irregularPulseInput" placeholder="irregular pulse"></td>
                 </tr>
                 <tr>    
-                    <td id="td_irregularDenominator"><input type="number" name="irregularDenominator" id="irregularDenominator" value="1"></td>
+                    <td id="td_irregularDenominator"><input type="number" min="1" name="irregularDenominator" id="irregularDenominator" value="1"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="processIrregularPulseInput()">Draw!</button></td>
                 </tr>
             </table>
-            <button onclick="processIrregularPulseInput()">Draw!</button>
         </div>
 
         <div id="zoom">

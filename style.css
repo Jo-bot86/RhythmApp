@@ -35,9 +35,10 @@ canvas {
 
 #pulseTable {
   background-color: #f7f7f7;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 5px;
 }
 
 td {
@@ -46,6 +47,14 @@ td {
   padding-bottom: 1px;
   padding-left: 5px;
   text-align: center;
+}
+
+#irregularTable {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 #td_irregularPulseInput {
@@ -129,7 +138,7 @@ input[type=checkbox]+label {
 #floatingUI {
   width: fit-content;
   height: fit-content;
-  background-color: #f1f1f1;
+  background-color: #d1d0d0;
   border: 1px solid #d3d3d3;
   position: absolute;
   top: 10px;
