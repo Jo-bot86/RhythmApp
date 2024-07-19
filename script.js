@@ -12,6 +12,7 @@ const context= canvas.getContext("2d");
 
 window.addEventListener('DOMContentLoaded', adjustCanvasHeight, drawBeatGrid);
 window.addEventListener('resize', adjustCanvasHeight);
+window.addEventListener('orientationchange', adjustCanvasHeight);
 
 function adjustCanvasHeight() {
     const headerFooterHeight = 70; // Adjust based on your actual header/footer height
