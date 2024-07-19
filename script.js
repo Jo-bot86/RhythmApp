@@ -319,56 +319,18 @@ function sumArray(array) {
     return sum; // return the total sum
 }
 
-// Make the floating UI element draggable:
-var floatingUI = document.getElementById("floatingUI");
-var header = document.getElementById("header");
+//expand/collapse the UI window
+document.addEventListener('DOMContentLoaded', function() {
+    const expandCollapseHandle = document.getElementById('expandCollapseHandle');
+    const windowContent = document.getElementById('windowContent');
 
-var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
-header.addEventListener('mousedown', dragMouseDown);
-header.addEventListener('touchstart', dragMouseDown);
-
-function dragMouseDown(event) {
-    event.preventDefault();
-    if (event.type === 'mousedown') {
-        pos3 = event.clientX;
-        pos4 = event.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    } else if (event.type === 'touchstart') {
-        pos3 = event.touches[0].clientX;
-        pos4 = event.touches[0].clientY;
-        document.ontouchend = closeDragElement;
-        document.ontouchmove = elementDrag;
-    }
-}
-
-function elementDrag(event) {
-    event.preventDefault();
-    if (event.type === 'mousemove') {
-        pos1 = pos3 - event.clientX;
-        pos2 = pos4 - event.clientY;
-        pos3 = event.clientX;
-        pos4 = event.clientY;
-    } else if (event.type === 'touchmove') {
-        pos1 = pos3 - event.touches[0].clientX;
-        pos2 = pos4 - event.touches[0].clientY;
-        pos3 = event.touches[0].clientX;
-        pos4 = event.touches[0].clientY;
-    }
-    floatingUI.style.top = (floatingUI.offsetTop - pos2) + "px";
-    floatingUI.style.left = (floatingUI.offsetLeft - pos1) + "px";
-}
-
-function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-    document.ontouchend = null;
-    document.ontouchmove = null;
-}
-
-function resetPosition() {
-    var floatingUI = document.getElementById("floatingUI");
-    floatingUI.style.top = "";
-    floatingUI.style.left = "";
-}
+    expandCollapseHandle.addEventListener('click', function() {
+        if (windowContent.style.display === 'none') {
+            windowContent.style.display = 'block';
+            expandCollapseHandle.textContent = 'Collapse User Interface'; // Optional: Change button text
+        } else {
+            windowContent.style.display = 'none';
+            expandCollapseHandle.textContent = 'Expand User Interface'; // Optional: Change button text
+        }
+    });
+});

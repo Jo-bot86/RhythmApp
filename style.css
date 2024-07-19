@@ -34,7 +34,7 @@ canvas {
 }
 
 #pulseTable {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -50,7 +50,7 @@ td {
 }
 
 #irregularTable {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -133,30 +133,43 @@ input[type=checkbox]+label {
 #zoomSlider {
   position: relative;
   top: 4px;
+  width: 15rem;
+  height: 1rem;
 }
 
-#floatingUI {
+#expandableWindow {
   width: fit-content;
   height: fit-content;
-  background-color: #d1d0d0;
+  background-color: #d5d4d4;
   border: 1px solid #d3d3d3;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
   z-index: 10;
   padding: 0.5em;
-  border-radius: 1em;
+  border-radius: 1em 0em 1em 1em;
+  box-shadow: -7px 6px 10px rgba(0,0,0,0.1); /* Example shadow */
 }
 
-#header {
-  padding: 10px;
+#expandCollapseHandle {
+  padding: 7px 10px 7px 10px;
   cursor: move;
   z-index: 10;
   background-color: #2196F3;
   color: #fff;
-  border-radius: 0.5em 0.5em 0em 0em;
+  border-radius: 0.6em 0em 0.6em 0.6em;
+  text-align: center;
+}
+
+#windowContent {  
+  display: none; /* Start as collapsed */
+}
+
+#beatsAndReset {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #resetButton {
-  float: right;
+  float: right
 }
