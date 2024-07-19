@@ -1,3 +1,19 @@
+html {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
 
 /* Reset margins and padding */
 html, body {
@@ -133,7 +149,7 @@ input[type=checkbox]+label {
 #zoomSlider {
   position: relative;
   top: 4px;
-  width: 15rem;
+  width: 10rem;
   height: 1rem;
 }
 
