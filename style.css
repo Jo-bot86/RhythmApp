@@ -5,13 +5,13 @@ html {
 
 @media (max-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -51,17 +51,17 @@ canvas {
 
 #pulseTable {
   background-color: #ffffff;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 5px;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem;
 }
 
 td {
-  padding-top: 1px;
-  padding-right: 5px;
-  padding-bottom: 1px;
-  padding-left: 5px;
+  padding-top: 0.08rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.08rem;
+  padding-left: 0.25rem;
   text-align: center;
 }
 
@@ -84,13 +84,13 @@ td {
 
 #irregularPulseInput {
   text-align: center;
-  width: 7em;
+  width: 7rem;
   border: none;
 }
 
 #irregularDenominator {
   text-align: right;
-  width: 3em;
+  width: 3rem;
   border: none;
 }
 
@@ -148,7 +148,7 @@ input[type=checkbox]+label {
 
 #zoomSlider {
   position: relative;
-  top: 4px;
+  top: 0.2rem;
   width: 10rem;
   height: 1rem;
 }
@@ -159,11 +159,11 @@ input[type=checkbox]+label {
   background-color: #d5d4d4;
   border: 1px solid #d3d3d3;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   z-index: 10;
-  padding: 0.5em;
-  border-radius: 1em 0em 1em 1em;
+  padding: 0.5rem;
+  border-radius: 1rem 0rem 1rem 1rem;
   box-shadow: -7px 6px 10px rgba(0,0,0,0.1); /* Example shadow */
 }
 
@@ -182,8 +182,8 @@ input[type=checkbox]+label {
 }
 
 #beatsAndReset {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #resetButton {
